@@ -1,7 +1,6 @@
-# FASTA statistics script
+sequence_dict = {}
 
-sequence_count = 0
-sequence_lengths = []
+current_header = None
 current_sequence = ""
 
 with open("data/sample.fasta", "r") as fasta_file:
@@ -9,27 +8,28 @@ with open("data/sample.fasta", "r") as fasta_file:
         line = line.strip()
 
         if line.startswith(">"):
-            if current_sequence:
-                sequence_lengths.append(len(current_sequence))
 
-            sequence_count += 1
+            if current_header:
+                sequence_dict[current_header] = len(current_sequence)
+
+            current_header = line[1:]
             current_sequence = ""
 
         else:
             current_sequence += line
 
-# Save the final sequence
-if current_sequence:
-    sequence_lengths.append(len(current_sequence))
+if current_header:
+    sequence_dict[current_header] = len(current_sequence)
 
-print("Number of sequences:", sequence_count)
-print("Sequence lengths:", sequence_lengths)
-print("Longest sequence:", max(sequence_lengths))
-print("Shortest sequence:", min(sequence_lengths))
-average_length = sum(sequence_lengths) / len(sequence_lengths)
+print("\nSequence Summary\n")
 
-print("Number of sequences:", sequence_count)
-print("Sequence lengths:", sequence_lengths)
-print("Longest sequence:", max(sequence_lengths))
-print("Shortest sequence:", min(sequence_lengths))
-print("Average length:", round(average_length, 2))
+for gene, length in sequence_dict.items():
+    print(f"{gene}: {length} bp")
+
+lengths = list(sequence_dict.values())
+
+print("\nOverall Statistics")
+print("Number of sequences:", len(lengths))
+print("Longest sequence:", max(lengths))
+print("Shortest sequence:", min(lengths))
+print("Average length:", round(sum(lengths)/len(lengths), 2))
