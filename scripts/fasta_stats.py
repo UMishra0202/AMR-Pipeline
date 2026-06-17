@@ -41,17 +41,32 @@ for gene, sequence in sequence_dict.items():
 
 	gc_percent = (gc_count / length) * 100
 
+	a_count = sequence.count("A")
+	t_count = sequence.count("T")
+	g_count = sequence.count("G")
+	c_count = sequence.count("C")
+	ambiguous_count = length - (a_count + t_count + g_count + c_count)
+
 	report_lines.append(f"{gene}")
 	report_lines.append(f"Length: {length} bp")
 	report_lines.append(f"GC Content: {gc_percent:.2f}%")
+	report_lines.append(f"Ambiguous bases: {ambiguous_count}")	
+	report_lines.append(f"A: {a_count}")
+	report_lines.append(f"T: {t_count}")
+	report_lines.append(f"G: {g_count}")
+	report_lines.append(f"C: {c_count}")
 	report_lines.append("")
 
 
 	print(f"{gene}")
 	print(f"Length: {length} bp")
-	print(f"GC Content: {gc_percent:.2f}%\n")
-
-lengths = []
+	print(f"GC Content: {gc_percent:.2f}%")
+	print(f"Ambiguous bases: {ambiguous_count}")
+	print(f"A: {a_count}")
+	print(f"T: {t_count}")
+	print(f"G: {g_count}")
+	print(f"C: {c_count}\n")
+	lengths = []
 
 for sequence in sequence_dict.values():
     lengths.append(len(sequence))

@@ -3,14 +3,29 @@ Sequence Summary
 blaTEM_1
 Length: 108 bp
 GC Content: 43.52%
+Ambiguous bases: 0
+A: 24
+T: 37
+G: 21
+C: 26
 
 blaSHV_1
 Length: 87 bp
 GC Content: 70.11%
+Ambiguous bases: 0
+A: 7
+T: 19
+G: 22
+C: 39
 
 blaCTXM_1
 Length: 26 bp
 GC Content: 42.31%
+Ambiguous bases: 3
+A: 7
+T: 5
+G: 7
+C: 4
 
 Overall Statistics
 Number of sequences: 3
