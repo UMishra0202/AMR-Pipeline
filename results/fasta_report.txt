@@ -1,0 +1,19 @@
+Sequence Summary
+
+blaTEM_1
+Length: 108 bp
+GC Content: 43.52%
+
+blaSHV_1
+Length: 87 bp
+GC Content: 70.11%
+
+blaCTXM_1
+Length: 26 bp
+GC Content: 42.31%
+
+Overall Statistics
+Number of sequences: 3
+Longest sequence: 108
+Shortest sequence: 26
+Average length: 73.67
