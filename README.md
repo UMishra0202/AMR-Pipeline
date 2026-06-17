@@ -57,5 +57,6 @@ Average length: 73.67
 ## Author
 
 Utkarsh Mishra
-M.Tech Bioinformatics, Delhi Technological University
+M.Tech Bioinformatics, 
+Delhi Technological University
 
