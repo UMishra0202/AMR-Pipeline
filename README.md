@@ -9,6 +9,16 @@ A Python-based bioinformatics project for analyzing antimicrobial resistance (AM
 * Generates summary statistics
 * Demonstrates reproducible bioinformatics workflows using Linux, Python, and Git
 
+## Features
+
+- FASTA sequence parsing
+- Sequence length analysis
+- GC content calculation
+- Nucleotide composition analysis
+- Ambiguous base detection
+- Automatic report generation
+
+
 ## Repository Contents
 
 📂 **data** → Example AMR gene sequences (FASTA)
@@ -23,32 +33,15 @@ A Python-based bioinformatics project for analyzing antimicrobial resistance (AM
 python scripts/fasta_stats.py
 ```
 
-## Example Output
-
-```text
-Sequence Summary
-
-blaTEM_1: 108 bp
-blaSHV_1: 87 bp
-blaCTXM_1: 26 bp
-
-Overall Statistics
-
-Number of sequences: 3
-Longest sequence: 108
-Shortest sequence: 26
-Average length: 73.67
-```
-
 ## Development Roadmap
 
 ✅ FASTA parsing
 
 ✅ Sequence statistics
 
-⬜ GC content analysis
+✅ GC content analysis
 
-⬜ Result export
+✅ Result export
 
 ⬜ AMR gene reporting
 
