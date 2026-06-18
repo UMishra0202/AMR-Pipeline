@@ -1,51 +1,35 @@
 # AMR Genome Analysis Pipeline
 
-A Python-based bioinformatics project for analyzing antimicrobial resistance (AMR) gene sequences from FASTA files.
+One paragraph description
 
-## What it does
+## Workflow
+(Input → Statistics → Filtering → CSV → Plot)
 
-* Parses FASTA sequences
-* Calculates sequence lengths
-* Generates summary statistics
-* Demonstrates reproducible bioinformatics workflows using Linux, Python, and Git
+## Run
 
-## Features
+python run_pipeline.py data/sample.fasta
 
-- FASTA sequence parsing
-- Sequence length analysis
-- GC content calculation
-- Nucleotide composition analysis
-- Ambiguous base detection
-- Automatic report generation
+## Output
 
+- fasta_report.txt
+- filtered_sequences.fasta
+- sequence_summary.csv
+- gc_content_plot.png
 
-## Repository Contents
+## Skills Demonstrated
 
-📂 **data** → Example AMR gene sequences (FASTA)
+- Python
+- FASTA parsing
+- argparse
+- Linux
+- Git/GitHub
+- Data visualization
 
-📂 **scripts** → Analysis scripts
+## Future Work
 
-📄 **README.md** → Project documentation
-
-## Run the Analysis
-
-```bash
-python scripts/fasta_stats.py
-```
-
-## Development Roadmap
-
-✅ FASTA parsing
-
-✅ Sequence statistics
-
-✅ GC content analysis
-
-✅ Result export
-
-⬜ AMR gene reporting
-
-⬜ Integration of real AMR datasets
+- Biopython
+- BLAST
+- AMR databases
 
 ## Author
 
