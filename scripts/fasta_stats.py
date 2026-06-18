@@ -1,3 +1,11 @@
+import argparse
+
+parser = argparse.ArgumentParser()
+
+parser.add_argument("input_file")
+
+args = parser.parse_args()
+
 sequence_dict = {}
 
 report_lines = []
@@ -5,7 +13,7 @@ report_lines = []
 current_header = None
 current_sequence = ""
 
-with open("data/sample.fasta", "r") as fasta_file:
+with open(args.input_file, "r") as fasta_file:
 
     for line in fasta_file:
 
